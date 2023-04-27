@@ -43,12 +43,15 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const newTag = await Tag.create({ tag: req.body.tag_name });
+    const newTag = await Tag.create({ tag_name: req.body.tag_name });
+    console.info(newTag);
+    res
+      .status(201)
+      .json({ message: `New tag created: ${req.body.tag_name} ` });
 
     if (!newTag) {
       res.status(404).json({ message: "Tag could not be created " });
     }
-    res.status(200).json(newTag);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
