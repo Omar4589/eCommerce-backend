@@ -72,8 +72,6 @@ router.put("/:id", async (req, res) => {
       { where: { id: req.params.id } }
     );
 
-    console.info(name);
-    console.info(tagUpdate);
 
     if (tagUpdate[0] > 0) {
       res.status(201).json({ message: "Tag Updated" });
@@ -99,7 +97,7 @@ router.delete("/:id", async (req, res) => {
       res.status(404).json({ message: "Tag could not be deleted" });
     }
 
-    res.json(deletedTag);
+    res.status(201).json({message: "Tag deleted successfully"});
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
