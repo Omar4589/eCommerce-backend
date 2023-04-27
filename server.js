@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const routes = require("./routes");
 // import sequelize connection
@@ -17,4 +18,3 @@ sequelize.sync({ force: false }).then(() => {
     console.log(`Now listening! Visit: http://localhost:${PORT}`)
   );
 });
-

@@ -1,4 +1,15 @@
 {
+  "parserOptions": {
+    "es6": true,
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+    
+  },
+  "parser": "babel-eslint",
+  
     "root": true,
     "env": {
       "browser": true,
