@@ -26,7 +26,7 @@ Walkthrough Video <a id="walkthroughvideo"></a>: https://drive.google.com/file/d
 
 1. Clone the repository to your local machine. 
 2. Run `npm install` to install  all the necessary dependencies. 
-3. Create a `.env` file in the root directory and set up your database credentials. If you are unfamiliar with dotenv, you can read the documentation at [link here]. 
+3. Create a `.env` file in the root directory and set up your database credentials. If you are unfamiliar with dotenv, you can read the documentation [here](https://www.npmjs.com/package/dotenv). 
 4. Open an integrated terminal using the schema.sql file in the db folder located in the root directory, log in to MySQL, and run `SOURCE schema.sql`. 
 5. Switch to the database by runing `USE ecommerce_db` or the name of the database you specified in your .env file. 
 6. Open an integrated terminal in the root directory and run `npm run seed` to seed the data to the database. 
